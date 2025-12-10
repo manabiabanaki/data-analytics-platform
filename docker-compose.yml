@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  data-collection:
+    build: ./data-collection
+    container_name: data_collection
+    volumes:
+      - ./data-collection:/app
+    command: python scripts/process_data.py
